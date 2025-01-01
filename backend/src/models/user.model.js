@@ -15,9 +15,8 @@ const userSchema = new mongoose.Schema({
   password: { 
     type: String, 
     required: true 
-    },
-  todos: [{ type: mongoose.Schema.Types.ObjectId, ref: 'Todo' }]  //reference to the Todo model
-});
+    }
+},{timestamps: true});
 
 // Pre-save middleware to hash password
 userSchema.pre('save', async function(next) {

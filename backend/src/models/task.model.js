@@ -13,8 +13,12 @@ const todoSchema = new mongoose.Schema({
       status: {
         type: String,
         required: true
-      }
-});
+      },
+      userId: { 
+        type: mongoose.Schema.Types.ObjectId,
+         ref: 'User',
+          required: true },
+}, { timestamps: true});
 
 const Todo = mongoose.model('Todo', todoSchema);
 
