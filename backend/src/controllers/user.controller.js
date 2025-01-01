@@ -45,6 +45,8 @@ const login = async (req, res) => {
         }
 };
 
+
+//controller for logging out user
 const logout = (req, res) => {
     res.clearCookie('jwt_token', { httpOnly: true, secure: true, sameSite: 'none' }).json({ message: 'Logged out successfully' });
 };

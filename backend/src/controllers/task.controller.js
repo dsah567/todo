@@ -32,6 +32,8 @@ const findAll = async (req, res) => {
     }
 }
 
+
+//controller for getting one task
 const findOne = async (req, res) => {
     try {
         const task = await Todo.findById({_id:req.params.id, userId: req.user.id});
@@ -44,6 +46,8 @@ const findOne = async (req, res) => {
     }
 }
 
+
+//controller for updating task
 const update = async (req, res) => {
 
     const {status} = req.body;
@@ -68,6 +72,8 @@ const update = async (req, res) => {
     }
 }
 
+
+//controller for deleting task
 const remove = async (req, res) => {    
     try {
         const task = await Todo.findByIdAndDelete({_id:req.params.id, userId: req.user.id});

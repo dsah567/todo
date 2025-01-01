@@ -1,3 +1,4 @@
+//user routes
 import { Router } from 'express';
 import { signup, login, logout } from '../controllers/user.controller.js';
 

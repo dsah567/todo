@@ -1,3 +1,4 @@
+//middleware to check if the user is authenticated or not
 import jwt from "jsonwebtoken";
 
 const auth = async (req, res, next) => {
